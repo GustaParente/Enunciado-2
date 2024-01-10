@@ -10,7 +10,7 @@ const TodoList = () => {
     try {
       const storedData = localStorage.getItem(key);
 
-      // Verificar se os dados estão presentes e não são nulos
+      // Verificar se os dados estão presentes para não ter o erro undefined
       return storedData ? JSON.parse(storedData) : defaultValue;
     } catch (error) {
       console.error(
@@ -37,6 +37,7 @@ const TodoList = () => {
     localStorage.setItem("nightTasks", JSON.stringify(nightTasks));
   }, [nightTasks]);
 
+  // Função de adicionar as tarefas
   const handleAddTask = (listType) => {
     let newTask;
     if (listType === "day") {
@@ -50,6 +51,7 @@ const TodoList = () => {
     }
   };
 
+  // Função de excluir as tarefas
   const handleRemoveTask = (listType, index) => {
     if (listType === "day") {
       const updatedDayTasks = [...dayTasks];
@@ -62,6 +64,7 @@ const TodoList = () => {
     }
   };
 
+  // Conteúdo da página que será retornado on load
   return (
     <div>
       <div className="main">
