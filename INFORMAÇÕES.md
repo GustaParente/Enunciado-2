@@ -10,3 +10,13 @@ A estilização da aplicação foi muito interessante de ser feita, pois o enunc
 achássemos melhor, por isso, apostei no simples e minimalista, estilo que na minha opinião, costuma enriquecer qualquer projeto pois não
 polui visualmente a aplicação.
 
+TUTORIAL:
+
+- Faça o download do código aqui pelo GitHub;
+- Extraia a pasta em um local escolhido;
+- Abra o código em uma IDE de sua escolha;
+- Abra o console e através do comando "cd" acesse a pasta do código baixado;
+- Utilize "npm install" para instalar as dependências do projeto;
+- Execute o programa usando "npm run dev";
+- Pronto!
+  
