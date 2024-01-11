@@ -13,17 +13,13 @@ const TodoList = () => {
       // Verificar se os dados estão presentes para não ter o erro undefined
       return storedData ? JSON.parse(storedData) : defaultValue;
     } catch (error) {
-      console.error(
-        `Erro ao fazer o parse dos dados do localStorage: ${error}`
-      );
+      console.error(`Erro ao fazer o parse dos dados do localStorage: ${error}`);
       return defaultValue;
     }
   };
 
   const [dayTasks, setDayTasks] = useState(getLocalStorageData("dayTasks", []));
-  const [nightTasks, setNightTasks] = useState(
-    getLocalStorageData("nightTasks", [])
-  );
+  const [nightTasks, setNightTasks] = useState(getLocalStorageData("nightTasks", []));
 
   const [newDayTask, setNewDayTask] = useState("");
   const [newNightTask, setNewNightTask] = useState("");
@@ -72,10 +68,10 @@ const TodoList = () => {
           <img className="picture" src={Profile} alt="Foto de perfil" />
           <h2 className="name">Gustavo Parente</h2>
           <p className="description">
-            Parágrafo de teste para ter algo escrito abaixo da foto e do nome
-            fictício (que eu acabei colocando meu próprio nome). Abaixo deste
-            parágrafo estão os quatro links formatados e estilizados de um jeito
-            simples, porém visualmente agradável.
+            Parágrafo de teste para ter algo escrito abaixo da foto e do nome fictício
+            (que eu acabei colocando meu próprio nome). Abaixo deste parágrafo estão os
+            quatro links formatados e estilizados de um jeito simples, porém visualmente
+            agradável.
           </p>
           <ul className="menu">
             <li>
